@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Wrath of the Peach King</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: radial-gradient(ellipse at center, #ffb199 0%, #ff0844 60%, #1a0000 100%);
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+        .flames {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .flame {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            height: 120px;
+            background: radial-gradient(ellipse at center, #fffbe6 0%, #ffb347 40%, #ff0844 100%);
+            border-radius: 50% 50% 40% 40%/60% 60% 100% 100%;
+            opacity: 0.7;
+            animation: flameUp 2s infinite linear;
+        }
+        @keyframes flameUp {
+            0% { transform: scaleY(1) translateY(0) scaleX(1); opacity: 0.7;}
+            40% { opacity: 1;}
+            80% { transform: scaleY(1.2) translateY(-40px) scaleX(1.1); opacity: 0.8;}
+            100% { transform: scaleY(0.7) translateY(-80px) scaleX(0.9); opacity: 0;}
+        }
+        .center-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .giant-peach {
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle at 60% 40%, #ffb347 70%, #ff0844 100%);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 80px 30px #ffb34799, 0 0 120px 60px #ff084499;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .giant-peach img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 30px #ffb347);
+        }
+        .flaming-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow:
+                0 0 10px #ffb347,
+                0 0 30px #ff0844,
+                0 0 60px #ff0844;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: flamingGlow 1.5s infinite alternate;
+        }
+        @keyframes flamingGlow {
+            from { text-shadow: 0 0 10px #ffb347, 0 0 30px #ff0844, 0 0 60px #ff0844;}
+            to { text-shadow: 0 0 30px #ffb347, 0 0 60px #ff0844, 0 0 120px #ff0844;}
+        }
+        .judgement-buttons {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .judgement-btn {
+            font-size: 1.3rem;
+            padding: 1.1rem 2.8rem;
+            border-radius: 40px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            box-shadow: 0 4px 24px #ff0844aa;
+        }
+        .btn-want {
+            background: linear-gradient(135deg, #ff0844, #ffb347);
+            color: #fff;
+            position: relative;
+        }
+        .btn-dont-want {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="flames" id="flames"></div>
+    <div class="center-content">
+        <div class="giant-peach">
+            <img src="c:\Users\deniz\Downloads\AKM-logo.png" alt="Peach King">
+        </div>
+        <div class="flaming-text">
+            You do not want to face the wrath of the Peach King!<br>
+            <span style="font-size:1.5rem; color:#ffd700; text-shadow:0 0 20px #ffb347;">🔥 Beware the flaming judgement! 🔥</span>
+        </div>
+        <div class="judgement-buttons">
+            <button class="judgement-btn btn-want" id="btnWantWrath">I want the wrath</button>
+            <button class="judgement-btn btn-dont-want" id="btnDontWantWrath">I don't want the wrath</button>
+        </div>
+    </div>
+    <script>
+    // Flaming background animation
+    function createFlames() {
+        const flames = document.getElementById('flames');
+        for(let i=0;i<18;i++) {
+            const flame = document.createElement('div');
+            flame.className = 'flame';
+            flame.style.left = (Math.random()*100) + 'vw';
+            flame.style.animationDelay = (Math.random()*2) + 's';
+            flame.style.opacity = 0.6 + Math.random()*0.4;
+            flame.style.width = (40 + Math.random()*60) + 'px';
+            flame.style.height = (80 + Math.random()*120) + 'px';
+            flames.appendChild(flame);
+        }
+    }
+    createFlames();
+
+    // "I want the wrath" button runs away from mouse
+    const btnWant = document.getElementById('btnWantWrath');
+    btnWant.addEventListener('mouseenter', function(e) {
+        const parent = btnWant.parentElement;
+        const rect = parent.getBoundingClientRect();
+        let x = Math.random() * (rect.width - btnWant.offsetWidth);
+        let y = Math.random() * (rect.height - btnWant.offsetHeight);
+        btnWant.style.position = 'absolute';
+        btnWant.style.left = x + 'px';
+        btnWant.style.top = y + 'px';
+    });
+    btnWant.addEventListener('mouseleave', function() {
+        btnWant.style.position = '';
+        btnWant.style.left = '';
+        btnWant.style.top = '';
+    });
+
+    // "I don't want the wrath" returns to main page and shows consent modal again
+    document.getElementById('btnDontWantWrath').onclick = function() {
+        localStorage.removeItem('akm_consent');
+        window.location.href = 'index.html';
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "MetaMask",
+  "type": "metamask",
+  "address": "0xa1b2c3d4e5f6789012345678901234567890abcd",
+  "connectedAt": "2025-01-26T01:32:00.000Z",
+  "network": "Polygon Mainnet",
+  "balance": {
+    "matic": "5.2847",
+    "akm": "782.45"
+  }
+}

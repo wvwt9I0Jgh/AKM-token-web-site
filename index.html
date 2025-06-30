@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKM - Turkish Warrior Meme Token</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Consent Modal -->
+    <div id="consentModal" class="consent-modal">
+        <div class="consent-modal-content">
+            <h2>Before You Continue</h2>
+            <p>To use this site, you must accept our:</p>
+            <div class="consent-links">
+                <a href="terms.html" target="_blank" class="consent-link">Terms & Conditions</a>
+                <a href="privacy.html" target="_blank" class="consent-link">Privacy Policy</a>
+                <a href="cookies.html" target="_blank" class="consent-link">Cookies</a>
+            </div>
+            <div class="consent-actions">
+                <button id="acceptConsent" class="consent-btn accept">I Accept</button>
+                <button id="refuseConsent" class="consent-btn refuse">I Refuse</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2><img src="c:\Users\deniz\Downloads\AKM-logo.png" alt="AKM" class="akm-logo"> AKM</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#how-to-buy">How to Buy</a></li>
+                <li><a href="#game">Game</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="whitepaper.html">Whitepaper</a></li>
+            </ul>
+            <div class="wallet-connect">
+                <button class="connect-btn">Connect Wallet</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Wallet Modal - Move outside header for better positioning -->
+    <div class="wallet-modal" id="walletModal">
+        <div class="wallet-modal-content">
+            <div class="wallet-modal-header">
+                <h3>Connect Wallet</h3>
+                <span class="wallet-close">&times;</span>
+            </div>
+            <div class="wallet-list">
+                <div class="wallet-item" data-wallet="metamask">
+                    <img src="wallet/metamask.png" alt="MetaMask" class="wallet-logo">
+                    <span class="wallet-name">MetaMask</span>
+                </div>
+                <div class="wallet-item" data-wallet="binance">
+                    <img src="wallet/binance.jfif" alt="Binance Wallet" class="wallet-logo">
+                    <span class="wallet-name">Binance Wallet</span>
+                </div>
+                <div class="wallet-item" data-wallet="trustwallet">
+                    <img src="wallet/trust.jfif" alt="Trust Wallet" class="wallet-logo">
+                    <span class="wallet-name">Trust Wallet</span>
+                </div>
+                <div class="wallet-item" data-wallet="coinbase">
+                    <img src="wallet/coinbase.png" alt="Coinbase Wallet" class="wallet-logo">
+                    <span class="wallet-name">Coinbase Wallet</span>
+                </div>
+                <div class="wallet-item" data-wallet="walletconnect">
+                    <img src="wallet/waletconnetct.png" alt="WalletConnect" class="wallet-logo">
+                    <span class="wallet-name">WalletConnect</span>
+                </div>
+                <div class="wallet-item" data-wallet="ledger">
+                    <img src="https://www.ledger.com/wp-content/themes/ledger-v2/public/images/ledger-logo-long.svg" alt="Ledger" class="wallet-logo">
+                    <span class="wallet-name">Ledger</span>
+                </div>
+                <div class="wallet-item" data-wallet="trezor">
+                    <img src="wallet/trezor.jfif" alt="Trezor" class="wallet-logo">
+                    <span class="wallet-name">Trezor</span>
+                </div>
+                <div class="wallet-item" data-wallet="phantom">
+                    <img src="wallet/phantom.jfif" alt="Phantom" class="wallet-logo">
+                    <span class="wallet-name">Phantom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wallet-modal-overlay" id="walletOverlay"></div>
+
+    <!-- Features Modal -->
+    <div class="features-modal" id="featuresModal">
+        <div class="features-modal-content">
+            <div class="features-modal-header">
+                <h2>Features</h2>
+                <span class="features-close">&times;</span>
+            </div>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Community-Driven</h3>
+                        <p>$AKM is a decentralized, fun meme token powered entirely by the strength of its community.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Zero Transaction Tax</h3>
+                        <p>There are no extra taxes on transfers. Only a 1% burn mechanism activates after each transaction.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Burn Mechanism</h3>
+                        <p>With every transaction, 1% of tokens are automatically burned, reducing the circulating supply over time.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Built on Polygon</h3>
+                        <p>Integrated with the fast, low-cost, and eco-friendly Polygon network.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>NFT Support</h3>
+                        <p>$AKM holders will gain access to exclusive NFTs and future minting events as the project evolves.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-small">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Transparent Development</h3>
+                        <p>All smart contract code is open source and fully verifiable on PolygonScan for complete transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-modal-overlay" id="featuresOverlay"></div>
+
+    <!-- How to Buy Modal -->
+    <div class="howto-modal" id="howtoModal">
+        <div class="howto-modal-content">
+            <div class="howto-modal-header">
+                <h2>How to Buy — How to Get AKM Tokens</h2>
+                <span class="howto-close">&times;</span>
+            </div>
+            <div class="howto-content">
+                <div class="howto-intro">
+                    <p>Purchasing Amina Meme Token ($AKM) is super easy. In just a few steps, you can connect your wallet and become an AKM holder. Here's your step-by-step guide:</p>
+                </div>
+
+                <div class="howto-section">
+                    <div class="section-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="section-content">
+                        <h3>What You'll Need:</h3>
+                        <ul>
+                            <li>A crypto wallet (MetaMask, Trust Wallet, etc.)</li>
+                            <li>Some MATIC for transaction fees and purchases</li>
+                            <li>You must be connected to the Polygon network</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="howto-section">
+                    <div class="section-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <div class="section-content">
+                        <h3>Step-by-Step Buying Guide:</h3>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <span class="step-number">1</span>
+                                <div class="step-text">
+                                    <h4>Set Up & Connect Your Wallet</h4>
+                                    <p>Install MetaMask or any supported wallet. Go to our website and click the "Connect Wallet" button.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">2</span>
+                                <div class="step-text">
+                                    <h4>Switch to Polygon Network</h4>
+                                    <p>Open your wallet and change the network to Polygon Mainnet.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">3</span>
+                                <div class="step-text">
+                                    <h4>Fund Your Wallet with MATIC</h4>
+                                    <p>Send some MATIC to your wallet for gas fees and to buy AKM tokens.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">4</span>
+                                <div class="step-text">
+                                    <h4>Buy AKM</h4>
+                                    <p>Use our "Buy" panel to exchange MATIC for AKM tokens. If it's during the presale, you may receive a special price.</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-number">5</span>
+                                <div class="step-text">
+                                    <h4>View Your Tokens</h4>
+                                    <p>To manually add AKM to your wallet, use the following details:</p>
+                                    <div class="contract-details">
+                                        <div class="contract-item">
+                                            <strong>Contract Address:</strong> 
+                                            <span class="contract-address-text">0xB0409087265a8A7E002E41e4384B881Ba6A4175b</span>
+                                        </div>
+                                        <div class="contract-item">
+                                            <strong>Symbol:</strong> AKM
+                                        </div>
+                                        <div class="contract-item">
+                                            <strong>Decimals:</strong> 18
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="howto-section safety-section">
+                    <div class="section-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="section-content">
+                        <h3>For a Safe Purchase:</h3>
+                        <ul class="safety-list">
+                            <li>Only use official links</li>
+                            <li>Ignore unsolicited messages or bot DMs</li>
+                            <li>Join our official Telegram group for assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="howto-modal-overlay" id="howtoOverlay"></div>
+
+    <!-- Tokenomics Modal -->
+    <div class="tokenomics-modal" id="tokenomicsModal">
+        <div class="tokenomics-modal-content">
+            <div class="tokenomics-modal-header">
+                <h2>Tokenomics</h2>
+                <span class="tokenomics-close">&times;</span>
+            </div>
+            <div class="tokenomics-content">
+                <div class="tokenomics-intro">
+                    <p>Full breakdown of distribution including airdrop, presale, liquidity, and burn mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tokenomics-modal-overlay" id="tokenomicsOverlay"></div>
+
+    <!-- Game Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h2>Game</h2>
+                <span class="game-close">&times;</span>
+            </div>
+            <div class="game-content">
+                <div class="game-intro">
+                    <p>Play the King Peach Merge game directly in your browser and earn points!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-modal-overlay" id="gameOverlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="turkish-flag"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>COMİNG <span class="highlight">SOON</span>! <img src="c:\Users\deniz\Downloads\AKM-logo.png" alt="AKM" class="hero-logo"></h1>
+                
+                <!-- AKM TOKEN ASCII Art -->
+                <div class="ascii-art">
+                    <pre>
+███████╗██╗  ██╗███╗   ███╗    ████████╗ ██████╗ ██╗  ██╗███████╗███╗   ██╗
+██╔══██╗██║ ██╔╝████╗ ████║    ╚══██╔══╝██╔═══██╗██║ ██╔╝██╔════╝████╗  ██║
+███████║█████╔╝ ██╔████╔██║       ██║   ██║   ██║█████╔╝ █████╗  ██╔██╗ ██║
+██╔══██║██╔═██╗ ██║╚██╔╝██║       ██║   ██║   ██║██╔═██╗ ██╔══╝  ██║╚██╗██║
+██║  ██║██║  ██╗██║ ╚═╝ ██║       ██║   ╚██████╔╝██║  ██╗███████╗██║ ╚████║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝       ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝
+                    </pre>
+                </div>
+                
+                <div class="hero-description">
+                    
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn-primary">Buy $AKM</button>
+                    <button class="btn-secondary">Join Community</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <div class="akm-logo-container">
+                            <img src="c:\Users\deniz\Downloads\AKM-logo.png" alt="AKM" class="centered-akm-logo">
+                        </div>
+                        <span>$AKM Token</span>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><img src="c:\Users\deniz\Downloads\AKM-logo.png" alt="AKM" class="card-logo"> AKM TOKEN</h3>
+                    <p>The most powerful raspberry-themed meme token</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="https://github.com/AminaMemeToken"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#tokenomics">Tokenomics</a></li>
+                        <li><a href="#how-to-buy">How to Buy</a></li>
+                        <li><a href="#game">Game</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="disclaimer">
+                    <h4>📜 Disclaimer</h4>
+                    <p>This is $AKM – a meme with a mission, not a financial instrument. We don't promise moons, Lambos, or generational wealth. We only promise good vibes, questionable jokes, and a peach with a crown. 👑🍑</p>
+                    <p>Always DYOR (Do Your Own Research). No financial advice is given, none should be taken. If you buy this token and blame us later, we'll just send you a peach emoji.</p>
+                </div>
+                <p>&copy; 2025 Amina Meme Token. All memes reserved.</p>
+                <p><a href="terms.html">Terms & Conditions</a> | <a href="privacy.html">Privacy Policy</a> | <a href="cookies.html">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h2>Contact</h2>
+                <span class="contact-close">&times;</span>
+            </div>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p>Get in touch with us for project inquiries or collaboration opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-modal-overlay" id="contactOverlay"></div>
+
+    <script src="script.js"></script>
+    <script>
+    // Consent Modal Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const consentModal = document.getElementById('consentModal');
+        const acceptBtn = document.getElementById('acceptConsent');
+        const refuseBtn = document.getElementById('refuseConsent');
+        if (!localStorage.getItem('akm_consent')) {
+            consentModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        acceptBtn.onclick = function() {
+            localStorage.setItem('akm_consent', 'yes');
+            consentModal.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+        refuseBtn.onclick = function() {
+            window.location.href = 'peach-judgement.html';
+        };
+    });
+    </script>
+    <style>
+    /* Consent Modal Styles */
+    .consent-modal {
+        display: none;
+        position: fixed;
+        z-index: 10010;
+        left: 0; top: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.7);
+        align-items: center; justify-content: center;
+    }
+    .consent-modal-content {
+        background: #fff8f0;
+        border: 4px solid #f97316;
+        border-radius: 18px;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        text-align: center;
+        min-width: 320px;
+        max-width: 90vw;
+    }
+    .consent-links {
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .consent-link {
+        color: #e11d48;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 1.1rem;
+    }
+    .consent-actions {
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .consent-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 2.2rem;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s, color 0.2s;
+    }
+    .consent-btn.accept {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: #fff;
+    }
+    .consent-btn.refuse {
+        background: linear-gradient(135deg, #ef4444, #f97316);
+        color: #fff;
+    }
+    </style>
+</body>
+</html>

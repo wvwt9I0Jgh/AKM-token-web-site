@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitepaper - AKM Token</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff8f0 0%, #fdf2f2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .document-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 3px solid #f97316;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.2);
+        }
+        
+        .document-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f97316;
+        }
+        
+        .document-header h1 {
+            color: #e11d48;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .document-content {
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        .document-content h2 {
+            color: #e11d48;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+        
+        .document-content h3 {
+            color: #f97316;
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: var(--gradient-raspberry);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+        
+        .tech-spec {
+            background: #f8f9fa;
+            border: 2px solid #f97316;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .roadmap-item {
+            background: linear-gradient(135deg, #fff8f0 0%, #fdf2f2 100%);
+            border-left: 4px solid #e11d48;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+    </a>
+    
+    <div class="document-container">
+        <div class="document-header">
+            <h1>AKM Whitepaper</h1>
+            <p>Technical Documentation & Project Overview</p>
+            <p>Version 1.0 - January 2025</p>
+        </div>
+        
+        <div class="document-content">
+            <h2>Executive Summary</h2>
+            <p>AKM (Amina Meme Token) is a community-driven meme token built on the Polygon blockchain, designed to combine entertainment with innovative tokenomics. Through a deflationary burn mechanism and community-centric approach, AKM aims to create sustainable value for its holders while maintaining the fun and engaging nature of meme culture.</p>
+            
+            <h2>1. Introduction</h2>
+            <p>The cryptocurrency landscape has witnessed the explosive growth of meme tokens, demonstrating the power of community-driven projects. AKM emerges as a next-generation meme token that balances entertainment value with technical innovation and sustainable tokenomics.</p>
+            
+            <h3>1.1 Vision</h3>
+            <p>To create the most engaging and sustainable meme token ecosystem that rewards community participation while providing real utility and value to holders.</p>
+            
+            <h3>1.2 Mission</h3>
+            <p>Build a vibrant community around AKM that celebrates Turkish culture and meme creativity, while implementing cutting-edge blockchain technology for maximum efficiency and user experience.</p>
+            
+            <h2>2. Technical Specifications</h2>
+            
+            <div class="tech-spec">
+                <h3>Token Details</h3>
+                <p><strong>Name:</strong> Amina Meme Token</p>
+                <p><strong>Symbol:</strong> AKM</p>
+                <p><strong>Blockchain:</strong> Polygon (MATIC)</p>
+                <p><strong>Contract Address:</strong> 0xB0409087265a8A7E002E41e4384B881Ba6A4175b</p>
+                <p><strong>Total Supply:</strong> 1,000,000,000 AKM</p>
+                <p><strong>Decimals:</strong> 18</p>
+                <p><strong>Standard:</strong> ERC-20 Compatible</p>
+            </div>
+            
+            <h3>2.1 Blockchain Choice: Polygon</h3>
+            <p>AKM is deployed on Polygon for several key advantages:</p>
+            <p>• <strong>Low Transaction Fees:</strong> Near-zero gas fees for all transactions</p>
+            <p>• <strong>Fast Transactions:</strong> 2-second block times</p>
+            <p>• <strong>Ethereum Compatibility:</strong> Full EVM compatibility</p>
+            <p>• <strong>Environmental Friendly:</strong> Proof-of-Stake consensus</p>
+            <p>• <strong>Scalability:</strong> Handles thousands of transactions per second</p>
+            
+            <h2>3. Tokenomics</h2>
+            
+            <h3>3.1 Distribution Model</h3>
+            <p>• <strong>40% - Community Airdrop:</strong> 400,000,000 AKM</p>
+            <p>• <strong>30% - Liquidity Pool:</strong> 300,000,000 AKM</p>
+            <p>• <strong>15% - Development Fund:</strong> 150,000,000 AKM</p>
+            <p>• <strong>10% - Marketing & Partnerships:</strong> 100,000,000 AKM</p>
+            <p>• <strong>5% - Team (12-month vesting):</strong> 50,000,000 AKM</p>
+            
+            <h3>3.2 Burn Mechanism</h3>
+            <p>AKM implements an innovative burn mechanism:</p>
+            <p>• <strong>1% Burn Rate:</strong> On every transaction, 1% of tokens are permanently burned</p>
+            <p>• <strong>Deflationary Supply:</strong> Total supply decreases over time</p>
+            <p>• <strong>Automatic Process:</strong> Burns are handled by smart contract</p>
+            <p>• <strong>Transparent Tracking:</strong> All burns are publicly verifiable</p>
+            
+            <h3>3.3 No Transaction Tax</h3>
+            <p>Unlike many meme tokens, AKM has zero transaction taxes:</p>
+            <p>• No buy tax</p>
+            <p>• No sell tax</p>
+            <p>• No transfer tax</p>
+            <p>• Only the 1% burn mechanism applies</p>
+            
+            <h2>4. Smart Contract Features</h2>
+            
+            <h3>4.1 Security Features</h3>
+            <p>• <strong>Audited Code:</strong> Smart contract undergoes comprehensive security audits</p>
+            <p>• <strong>Ownership Renounced:</strong> No centralized control after deployment</p>
+            <p>• <strong>Liquidity Locked:</strong> Initial liquidity permanently locked</p>
+            <p>• <strong>No Mint Function:</strong> Cannot create additional tokens</p>
+            
+            <h3>4.2 Transparency</h3>
+            <p>• <strong>Open Source:</strong> Contract code available for public review</p>
+            <p>• <strong>Verified Contract:</strong> Verified on PolygonScan</p>
+            <p>• <strong>Real-time Tracking:</strong> All transactions publicly visible</p>
+            
+            <h2>5. Community & Governance</h2>
+            
+            <h3>5.1 Community-Driven Development</h3>
+            <p>AKM prioritizes community input in all major decisions:</p>
+            <p>• Community proposals and voting</p>
+            <p>• Regular community calls and updates</p>
+            <p>• Transparent development roadmap</p>
+            <p>• Open-source contribution opportunities</p>
+            
+            <h3>5.2 Communication Channels</h3>
+            <p>• Official Website and Documentation</p>
+            <p>• Telegram Community Group</p>
+            <p>• Twitter and Social Media</p>
+            <p>• GitHub Repository</p>
+            
+            <h2>6. Use Cases & Utility</h2>
+            
+            <h3>6.1 Current Utilities</h3>
+            <p>• <strong>Community Governance:</strong> Voting on project decisions</p>
+            <p>• <strong>Meme Creation:</strong> Rewarding creative community content</p>
+            <p>• <strong>Staking Rewards:</strong> Earning additional tokens through staking</p>
+            <p>• <strong>NFT Access:</strong> Exclusive NFT drops for holders</p>
+            
+            <h3>6.2 Future Utilities</h3>
+            <p>• <strong>Gaming Integration:</strong> In-game currency for AKM games</p>
+            <p>• <strong>Marketplace:</strong> Payment method for AKM ecosystem</p>
+            <p>• <strong>Cross-chain Bridge:</strong> Multi-chain compatibility</p>
+            <p>• <strong>DeFi Integration:</strong> Yield farming and liquidity mining</p>
+            
+            <h2>7. Roadmap</h2>
+            
+            <div class="roadmap-item">
+                <h3>Phase 1: Foundation (Q1 2025)</h3>
+                <p>• Token deployment and verification</p>
+                <p>• Community building and marketing launch</p>
+                <p>• Initial DEX listings (QuickSwap, SushiSwap)</p>
+                <p>• Airdrop distribution to early supporters</p>
+            </div>
+            
+            <div class="roadmap-item">
+                <h3>Phase 2: Growth (Q2 2025)</h3>
+                <p>• Major CEX listings (Gate.io, MEXC)</p>
+                <p>• NFT collection launch</p>
+                <p>• Community gaming platform beta</p>
+                <p>• Partnership announcements</p>
+            </div>
+            
+            <div class="roadmap-item">
+                <h3>Phase 3: Expansion (Q3 2025)</h3>
+                <p>• Cross-chain bridge implementation</p>
+                <p>• Advanced DeFi features</p>
+                <p>• Mobile app development</p>
+                <p>• Global marketing campaigns</p>
+            </div>
+            
+            <div class="roadmap-item">
+                <h3>Phase 4: Evolution (Q4 2025)</h3>
+                <p>• DAO governance implementation</p>
+                <p>• Ecosystem marketplace launch</p>
+                <p>• Advanced gaming features</p>
+                <p>• Strategic partnerships and integrations</p>
+            </div>
+            
+            <h2>8. Risk Assessment</h2>
+            
+            <h3>8.1 Technical Risks</h3>
+            <p>• Smart contract vulnerabilities (mitigated through audits)</p>
+            <p>• Blockchain network issues (using stable Polygon network)</p>
+            <p>• Regulatory changes (monitoring compliance requirements)</p>
+            
+            <h3>8.2 Market Risks</h3>
+            <p>• Cryptocurrency market volatility</p>
+            <p>• Competition from other meme tokens</p>
+            <p>• Changing investor sentiment</p>
+            
+            <h3>8.3 Risk Mitigation</h3>
+            <p>• Comprehensive security audits</p>
+            <p>• Transparent communication</p>
+            <p>• Strong community building</p>
+            <p>• Continuous development and innovation</p>
+            
+            <h2>9. Team & Advisors</h2>
+            <p>The AKM team consists of experienced blockchain developers, marketing professionals, and community managers with extensive experience in the cryptocurrency space. The team is committed to building a long-term, sustainable project that benefits the entire community.</p>
+            
+            <h2>10. Legal Disclaimer</h2>
+            <p>AKM is a utility token designed for entertainment and community purposes. This whitepaper does not constitute investment advice, and potential holders should conduct their own research before participating. Cryptocurrency investments carry inherent risks, and participants should only invest what they can afford to lose.</p>
+            
+            <h2>11. Conclusion</h2>
+            <p>AKM represents the next evolution of meme tokens, combining community-driven development with innovative tokenomics and real utility. Through its deflationary burn mechanism, zero transaction taxes, and focus on community engagement, AKM is positioned to become a leading force in the meme token space while providing genuine value to its holders.</p>
+            
+            <p>Join the AKM community today and be part of the meme token revolution!</p>
+        </div>
+    </div>
+</body>
+</html>
